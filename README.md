@@ -1,6 +1,8 @@
 # repo1
 This is test repository for illustrate work with GitHub 
 
+This is **BOLD text**
+
 This is example of code formatting
 ```
    int a;
