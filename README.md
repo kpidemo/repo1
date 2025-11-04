@@ -1,5 +1,6 @@
 # repo1
-This is test repository for illustrate work with GitHub. Changes maked in branch `main` 
+
+This is test repository for illustrate work with GitHub, in particular - conflict resolving.
 
 This is **BOLD text**
 
