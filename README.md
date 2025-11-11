@@ -13,4 +13,4 @@ This is example of code formatting
 
 This is _italic_ formatting
 
-Local changes
+Global changes
