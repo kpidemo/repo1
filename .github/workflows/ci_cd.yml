@@ -31,3 +31,6 @@ jobs:
 
       - name: Compile C code
         run: gcc calc.c -o calc
+      
+      - name: Run program
+        run: ./calc
