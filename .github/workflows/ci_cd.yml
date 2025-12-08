@@ -49,9 +49,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
           tag_name: ${{ github.run_id }} # Uses the pushed tag name
-          release_name: Release ${{ github.ref_name }} # Sets the release name
+          release_name: Release ${{ github.ref_name }} number ${{ github.run_id }} # Sets the release name
           body: | # Defines the release description
-            This release corresponds to tag ${{ github.ref_name }}.
+            This release corresponds to tag ${{ github.run_id }}.
             You can add more details about the changes here.
           draft: false
           prerelease: false
