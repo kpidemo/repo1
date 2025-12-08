@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: write # Grant write permission to repository contents
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -34,17 +37,17 @@ jobs:
       
       #- name: Run program
       #  run: ./calc
+      
       - name: Create Release
         id: create_release
-        uses: comnoco/create-release@v2
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
+          tag_name: ${{ github.ref_name }} # Uses the pushed tag name
+          release_name: Release ${{ github.ref_name }} # Sets the release name
+          body: | # Defines the release description
+            This release corresponds to tag ${{ github.ref_name }}.
+            You can add more details about the changes here.
           draft: false
           prerelease: false
