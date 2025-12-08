@@ -2,4 +2,6 @@
 
 void main() {
     printf("Calculator runs");
+    printf("Second line");
 }
+
